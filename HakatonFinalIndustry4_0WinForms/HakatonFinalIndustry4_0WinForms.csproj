@@ -7,7 +7,7 @@
     <ProjectGuid>{BF3D35A0-AF7F-4787-B70A-6F0354221D95}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>HakatonFinalIndustry4_0WinForms</RootNamespace>
-    <AssemblyName>HakatonFinalIndustry4_0WinForms</AssemblyName>
+    <AssemblyName>Industry4_0</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -85,6 +88,9 @@
       <Project>{81d3833a-c90d-4841-9e71-e3cba4241348}</Project>
       <Name>Industry4_0Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
