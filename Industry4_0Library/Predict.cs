@@ -29,34 +29,47 @@ namespace Industry4_0Library
 			Circles = new string[] { "530000", "550000", "600000", "610000", "630000", "840000" };
 		}
 
-		public double[] Prognose(int time, int day, int month, int year, int circle)
+		public List<double[]> Prognose(int time, int day, int month, int year, int circle)
 		{
-			List<string[]> dataRows1 = new List<string[]>();
-			List<string[]> dataRows2 = new List<string[]>();
+			List<string[]> dataRows1 = GetRowForPrognose(day, month, year - 1, circle);
+			List<string[]> dataRows2 = GetRowForPrognose(day, month, year, circle);
+
+			List<double[]> result = new List<double[]>();
+			for (int i = 0; i < dataRows1.Count; i++)
+			{
+				int value1 = Convert.ToInt32(dataRows1[i][4]);
+				int value2 = Convert.ToInt32(dataRows2[i][4]);
+
+				double ratio = value2 / (double)value1 - 0.5;
+				string[] data = new string[] { i.ToString(), $"{day}.{month}", dataRows1[i][2], Circles[circle] };
+
+				result.Add(new double[] { value2, perceptron.Predict(CreateRow(ratio, data))[0] });
+			}
+
+			return result;
+		}
+
+		private List<string[]> GetRowForPrognose(int day, int month, int year, int circle)
+		{
+			List<string[]> result = new List<string[]>();
 
 			using (StreamReader reader = new StreamReader($"Генерация и потребление_{year - 1}.csv"))
 			{
 				string[] rows = reader.ReadToEnd().Split('\n');
-			
+
 				for (int i = 1; i < rows.Length - 1; i++)
 				{
 					string[] row = rows[i].Replace("\r", "").Split(';');
 
-					if (row[1].Contains($"{day}.{month}") && row[3] == Circles[circle])
-						dataRows1.Add(row);
+					string dayStr = day.ToString().Length == 1 ? "0" + day.ToString() : day.ToString();
+					string monthStr = month.ToString().Length == 1 ? "0" + month.ToString() : month.ToString();
+
+					if (row[1].Contains($"{dayStr}.{monthStr}") && row[3] == Circles[circle])
+						result.Add(row);
 				}
 			}
 
-			int value1 = 23;
-			int value2 = 23;
-
-			double ratio = 0.56; //value2 / (double)value1 - 0.5;
-			string[] data = new string[] { time.ToString(), $"{day}.{month}", Circles[circle] };
-
-			List<double> result = new List<double>();
-			perceptron.Predict(CreateRow(ratio, data));
-
-			return null;
+			return result;
 		}
 
 		public void Train(int year)
