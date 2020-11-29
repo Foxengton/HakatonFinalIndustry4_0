@@ -28,12 +28,13 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.label5 = new System.Windows.Forms.Label();
@@ -300,53 +301,53 @@
 			// chartPast
 			// 
 			this.chartPast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-			chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			chartArea3.Name = "ChartArea1";
-			this.chartPast.ChartAreas.Add(chartArea3);
+			chartArea7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			chartArea7.Name = "ChartArea1";
+			this.chartPast.ChartAreas.Add(chartArea7);
 			this.chartPast.Dock = System.Windows.Forms.DockStyle.Left;
 			this.chartPast.Location = new System.Drawing.Point(0, 0);
 			this.chartPast.Name = "chartPast";
 			this.chartPast.Size = new System.Drawing.Size(224, 481);
 			this.chartPast.TabIndex = 0;
 			this.chartPast.Text = "chart1";
-			title3.Name = "Title1";
-			title3.Text = "За прошлый период";
-			this.chartPast.Titles.Add(title3);
+			title7.Name = "Title1";
+			title7.Text = "За прошлый период";
+			this.chartPast.Titles.Add(title7);
 			// 
 			// chartPresent
 			// 
 			this.chartPresent.BackColor = System.Drawing.Color.LightGray;
-			chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			chartArea2.Name = "ChartArea1";
-			this.chartPresent.ChartAreas.Add(chartArea2);
+			chartArea8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			chartArea8.Name = "ChartArea1";
+			this.chartPresent.ChartAreas.Add(chartArea8);
 			this.chartPresent.Dock = System.Windows.Forms.DockStyle.Left;
 			this.chartPresent.Location = new System.Drawing.Point(224, 0);
 			this.chartPresent.Name = "chartPresent";
 			this.chartPresent.Size = new System.Drawing.Size(230, 481);
 			this.chartPresent.TabIndex = 1;
 			this.chartPresent.Text = "chart1";
-			title2.Name = "Title1";
-			title2.Text = "За текущий период";
-			this.chartPresent.Titles.Add(title2);
+			title8.Name = "Title1";
+			title8.Text = "За текущий период";
+			this.chartPresent.Titles.Add(title8);
 			// 
 			// chartFuture
 			// 
 			this.chartFuture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.chartFuture.BackSecondaryColor = System.Drawing.Color.Black;
 			this.chartFuture.BorderlineColor = System.Drawing.Color.Transparent;
-			chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			chartArea1.BackSecondaryColor = System.Drawing.Color.Black;
-			chartArea1.Name = "ChartArea1";
-			this.chartFuture.ChartAreas.Add(chartArea1);
+			chartArea9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			chartArea9.BackSecondaryColor = System.Drawing.Color.Black;
+			chartArea9.Name = "ChartArea1";
+			this.chartFuture.ChartAreas.Add(chartArea9);
 			this.chartFuture.Dock = System.Windows.Forms.DockStyle.Left;
 			this.chartFuture.Location = new System.Drawing.Point(454, 0);
 			this.chartFuture.Name = "chartFuture";
 			this.chartFuture.Size = new System.Drawing.Size(240, 481);
 			this.chartFuture.TabIndex = 2;
 			this.chartFuture.Text = "chart1";
-			title1.Name = "Title1";
-			title1.Text = "За следующий период";
-			this.chartFuture.Titles.Add(title1);
+			title9.Name = "Title1";
+			title9.Text = "За следующий период";
+			this.chartFuture.Titles.Add(title9);
 			// 
 			// FormMainMenu
 			// 
@@ -356,9 +357,11 @@
 			this.Controls.Add(this.panel7);
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
 			this.Name = "FormMainMenu";
-			this.Text = "Form1";
+			this.Text = "Меню прогнозирования";
 			this.panel1.ResumeLayout(false);
 			this.panel6.ResumeLayout(false);
 			this.panel4.ResumeLayout(false);
